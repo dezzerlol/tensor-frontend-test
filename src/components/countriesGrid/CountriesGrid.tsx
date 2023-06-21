@@ -40,7 +40,7 @@ const CountriesGrid = () => {
         countries.map((country) => (
           <CountryCard
             key={country.name.common}
-            name={country.name.common}
+            name={country.name.official}
             mapLink={country.maps.googleMaps}
             flag={country.flags.png}
             capital={country.capital && country.capital[0]}

@@ -21,6 +21,7 @@
 .country_card {
   min-width: 200px;
   max-width: 300px;
+  width: 100%;
   min-height: 200px;
   max-height: 200px;
   border-radius: 10px;
