@@ -1,13 +1,22 @@
-.countries_grid {
+main {
   background-color: #d8efed;
   height: 100%;
   width: 100%;
-  padding: 105px;
-  display: flex;
+  overflow-y: auto;
+}
+
+.countries_grid {
+  margin: 105px 50px 50px 50px;
+  display: inline-flex;
   gap: 20px;
   flex-wrap: wrap;
-  overflow-y: auto;
   align-content: flex-start;
+}
+
+@media (max-width: 768px) {
+  .countries_grid {
+    margin: 20px;
+  }
 }
 
 .loader_wrapper {

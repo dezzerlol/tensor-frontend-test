@@ -35,20 +35,22 @@ const CountriesGrid = () => {
   }
 
   return (
-    <main className={styles.countries_grid}>
-      {countries.length > 0 ? (
-        countries.map((country) => (
-          <CountryCard
-            key={country.name.common}
-            name={country.name.official}
-            mapLink={country.maps.googleMaps}
-            flag={country.flags.png}
-            capital={country.capital && country.capital[0]}
-          />
-        ))
-      ) : (
-        <div>No countries found...</div>
-      )}
+    <main>
+      <div className={styles.countries_grid}>
+        {countries.length > 0 ? (
+          countries.map((country) => (
+            <CountryCard
+              key={country.name.common}
+              name={country.name.official}
+              mapLink={country.maps.googleMaps}
+              flag={country.flags.png}
+              capital={country.capital && country.capital[0]}
+            />
+          ))
+        ) : (
+          <div>No countries found...</div>
+        )}
+      </div>
     </main>
   )
 }
@@ -67,7 +69,7 @@ const CountryCard = ({
   capital: string
 }) => {
   return (
-    <a key={name} className={styles.country_card} href={mapLink} target='_blank'>
+    <a className={styles.country_card} href={mapLink} target='_blank'>
       <img src={flag} className={styles.country_flag} loading='lazy' />
       <div className={styles.shadow} />
       <div className={styles.country_info}>
