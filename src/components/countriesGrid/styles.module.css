@@ -1,6 +1,6 @@
 .countries_grid {
   background-color: #d8efed;
-  min-height: 100%;
+  height: 100%;
   width: 100%;
   padding: 105px;
   display: flex;
